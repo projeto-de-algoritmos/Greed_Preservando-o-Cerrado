@@ -132,8 +132,9 @@ if __name__ == '__main__':
 
     path.appendleft(x)
     
-    for i in range(n-1):
-        graph_reinforced.change_color_edge(path[i], path[i+1], "green")
+    for i, n in enumerate(path):
+        if i != len(path)-1:
+            graph_reinforced.change_color_edge(n, path[i+1], "green")
     for k, v in bridges_simples.items():
         graph_reinforced.link(k, v[0], v[1], "brown")
 
