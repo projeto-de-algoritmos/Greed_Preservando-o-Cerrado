@@ -13,6 +13,17 @@ class MyGraph:
     def get_node(self, name):
         return self._drawing.get_node(str(name))[0]
 
+    def change_color_node(self, name, color):
+        node = self.get_node(name)
+        node.obj_dict['attributes']['color'] = color
+    
+    def get_edge(self, src, dest):
+        return self._drawing.get_edge(src, dest)
+
+    def change_color_edge(self, src, dest, color):
+        edge = self.get_edge(src, dest)[0]
+        edge.obj_dict['attributes']['color'] = color
+    
     def make_node(self, name):
         return Node(
             name,
@@ -21,7 +32,7 @@ class MyGraph:
             labelloc='b',
             fontname="Times-Roman:bold",
             fontcolor='black',
-            fontsize=40,
+            fontsize=50,
         )
 
     def add_nodes(self, *nodes_names):
@@ -30,8 +41,11 @@ class MyGraph:
 
             self._drawing.add_node(node)
 
-    def link(self, src, dst, w):
-        self._drawing.add_edge(Edge(src, dst, label=w, fontcolor=red, fontsize=40))
+    def link(self, src, dst, w, color=None):
+        if color:
+            self._drawing.add_edge(Edge(src, dst, label=w, fontcolor='blue', color=color, fontsize=50, penwidth=15))
+        else:
+            self._drawing.add_edge(Edge(src, dst, label=w, fontcolor='blue', fontsize=50, penwidth=15))
 
     def get_image(self):
         img = self._drawing.create_png()

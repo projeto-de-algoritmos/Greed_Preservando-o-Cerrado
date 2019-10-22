@@ -10,9 +10,11 @@
 | 16/0144752 | Sara Conceição de S. A. Silva |
 
 ## Sobre 
-Solução da questão da Maratona UnB de programação com visualização associada. Link para questão [aqui](https://codeforces.com/group/btcK4I5D5f/contest/253645/problem/B).
+Solução da questão da Maratona UnB de programação com visualização associada. Link para questão [aqui](https://codeforces.com/group/btcK4I5D5f/contest/253645/problem/B). [Link da submissão](https://codeforces.com/group/btcK4I5D5f/contest/253645/submission/62655005).
 
 ## Visualização
+
+O nó verde é o início do percurso e o vermelho é o fim do percurso. As arestas verdes indicam o menor caminho escolhido e as arestas marrons indicam os canos auxiliares aos canos críticos.
 
 ### Input Pequeno
 
@@ -32,7 +34,7 @@ Solução da questão da Maratona UnB de programação com visualização associ
 
 #### Solução
 
-![solução big](images/original_big.png)
+![solução big](images/solution_big.png)
 
 ## Instalação 
 
