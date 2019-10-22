@@ -4,8 +4,8 @@ from heapq import heappop, heappush
 from mygraph import MyGraph
 
 # Make graph
-def make_graph(n, name):
-    graph = MyGraph(graph_type='graph', size='20, 11, 25!', ratio='fill', label=name, fontsize=40)
+def make_graph(n):
+    graph = MyGraph(graph_type='graph', size='20, 11, 25!', ratio='fill', fontsize=40)
 
     for v in range(1, n+1):
         graph.add_nodes(v)
@@ -21,8 +21,7 @@ def make_graph_img(graph, graph_name):
 # Read number of nodes and number of edges
 n, m = map(int, input().split())
 
-graph_original = make_graph(n, "Sistema Inicial")
-graph_reinforced = make_graph(n, "Sistema Reforçado")
+graph_original = make_graph(n)
 
 # Read edges
 edges = defaultdict(list)
